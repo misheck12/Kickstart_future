@@ -294,17 +294,6 @@ footer p {
     color: white;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .programs-grid {
-        flex-direction: column;
-    }
-
-    .program-card-unique {
-        flex: 0 1 100%;
-    }
-}
-
 
 /* Hero Section */
 .unique-hero-about {
@@ -1348,4 +1337,58 @@ footer .social-icons-footer a {
     color: white;
     margin-right: 10px;
     text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .programs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .program-card {
+        width: 100%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 90%;
+    }
+
+    header nav ul {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .programs-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta-button {
+        margin-left: 0;
+    }
 }
